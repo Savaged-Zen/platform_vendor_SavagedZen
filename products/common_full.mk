@@ -1,11 +1,5 @@
-# Inherit common CM stuff
+# Inherit common SZ stuff
 $(call inherit-product, vendor/savagedzen/products/common.mk)
-
-# Bring in all audio files
-include frameworks/base/data/sounds/AllAudio.mk
-
-# Theme packages
-include vendor/savagedzen/products/themes.mk
 
 # Default ringtone
 PRODUCT_PROPERTY_OVERRIDES += \

@@ -1,0 +1,37 @@
+#!/system/bin/sh
+#
+# Compcache manager
+# shade@chemlab.org (cyanogen)
+#
+
+DEV=/dev/block/zram0
+SYSFS_PATH=/sys/block/zram0
+MODULE=zram
+
+case "$1" in
+   start)
+      echo 3 > /proc/sys/vm/drop_caches
+      echo 30 > /proc/sys/vm/swappiness
+      modprobe $MODULE
+      echo "$2" > $SYSFS_PATH/disksize
+      mkswap $DEV >/dev/null
+      swapon $DEV
+   ;;
+
+   stop)
+      swapoff $DEV >/dev/null 2>&1
+      rmmod $MODULE >/dev/null 2>&1
+   ;;
+   stats)
+     cd $SYSFS_PATH && for i in * ; do
+         echo -n "$i:" 
+         cat $i
+     done
+   ;;
+   *)
+      echo "Usage: $0 {start <size>|stop|stats}"
+      exit 1
+esac
+
+exit 0
+

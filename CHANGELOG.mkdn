@@ -1,0 +1,28 @@
+Savaged-Zen(MOD)
+===============
+
+Visit http://github.com/SavagedZen for full changelogs and git access.
+
+Visit http://review.savaged-zen.org for our Gerrit instance.
+
+Follow http://twitter.com/szgit for commit-by-commit updates.
+
+Maintainers:
+------------
+* Supersonic: jsseidel, mwielgosz
+
+CHANGELOG
+---------
+### Alpha 002
+* Common: Android 2.3.3 (Gingerbread) - Google
+* Common: New boot animation - Nyght
+* Common: SZParts implementation - jsseidel1, mwielogsz
+* Common: SZWallpapers - Nyght, mwielgosz
+* Common: SMS split for braindead carriers - mwielgosz
+* Common: ADWLauncher 1.3.3 - Ander Webbs
+
+### Alpha 003
+* Common: CPU frequency/scaling control in SZParts - Robert Ramiega
+* Common: WiMAX - #Teamwin
+* Common: Network Optimizations
+* Common: Reboot Options - mwielogsz

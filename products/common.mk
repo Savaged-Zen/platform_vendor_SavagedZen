@@ -3,8 +3,6 @@ PRODUCT_NAME := savagedzen
 PRODUCT_BRAND := savagedzem
 PRODUCT_DEVICE := generic
 
-PRODUCT_PACKAGES += ADWLauncher
-
 ifdef SAVAGEDZEN_NIGHTLY
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.rommanager.developerid=savagedzennightly
@@ -34,9 +32,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     FileManager \
     SZParts \
-    SZWallpapers 
+    SZWallpapers \
+    Launcher2
     
-    # Extra tools in CyanogenMod
+    # Extra tools in SZMod
 PRODUCT_PACKAGES += \
     openvpn
 
@@ -45,7 +44,7 @@ PRODUCT_COPY_FILES += \
     vendor/savagedzen/CHANGELOG.mkdn:system/etc/CHANGELOG-SZ.txt
     vendor/savagedzen/CREDITS.mkdn:system/etc/CREDITS-SZ.txt
 
-# Common CM overlay
+# Common SZ overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/savagedzen/overlay/common
 
 PRODUCT_COPY_FILES += \

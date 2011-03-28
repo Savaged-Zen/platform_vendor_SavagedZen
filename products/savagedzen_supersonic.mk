@@ -17,7 +17,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_ID=FRF91 BUILD_DISPLAY_ID=GRI40 PRODUCT_NA
 # Build kernel
 #PRODUCT_SPECIFIC_DEFINES += TARGET_PREBUILT_KERNEL=
 #PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_DIR=kernel-msm
-#PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=cyanogen_supersonic_defconfig
+#PRODUCT_SPECIFIC_DEFINES += TARGET_KERNEL_CONFIG=EVO-CFS-HAVS-GB
 
 # Extra Supersonic overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/savagedzen/overlay/supersonic
@@ -27,14 +27,14 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/savagedzen/overlay/supersonic
 #
 ifdef SAVAGEDZEN_NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=SavagedZen(MOD)-Alpha3-$(shell date +%m%d%Y)-NIGHTLY-Evo4G
+        ro.modversion=SavagedZen(MOD)-RC2-$(shell date +%m%d%Y)-NIGHTLY-Evo4G
 else
     ifdef SAVAGEDZEN_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=SavagedZen(MOD)-Alpha3-Evo4G
+            ro.modversion=SavagedZen(MOD)-RC2-Evo4G
     else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=SavagedZen(MOD)-Alpha3-Evo4G
+            ro.modversion=SavagedZen(MOD)-RC2-Evo4G
     endif
 endif
 
